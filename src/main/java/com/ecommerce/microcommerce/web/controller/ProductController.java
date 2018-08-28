@@ -72,6 +72,14 @@ public class ProductController {
         return produitAvecDiff;
     }
 
+    //rechecher trier
+    @GetMapping(value ="/ProduitsTries")
+    public List<Product> produitsTries(){
+        List<Product> produitsTries = productDao.findByOrderByNom();
+
+        return produitsTries;
+    }
+
     //ajouter un produit
     @PostMapping(value = "/Produits")
 
